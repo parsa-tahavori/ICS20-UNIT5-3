@@ -30,13 +30,13 @@ function myButtonClicked() {
 
   if (age >= 17) {
     document.getElementById("answer").innerHTML =
-      "you can watch an R rated movie alone!"
+      "you can play an R rated game!"
   } else if (age >= 13) {
     document.getElementById("answer").innerHTML =
-      "you can watch a PG-13 rated movie alone!"
+      "you can play a PG-13 rated game!"
   } else if (age >= 5) {
     document.getElementById("answer").innerHTML =
-      "you can watch a PG rated movie alone!"
+      "you can play a PG rated game!"
   } else {
     document.getElementById("answer").innerHTML =
       "you're too young to do anything!"
