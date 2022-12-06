@@ -10,14 +10,35 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test-use/sw.js", {
-    scope: "/ICS2O-PWA-Test-use/",
+  navigator.serviceWorker.register("/ICS20-UNIT5-3/sw.js", {
+    scope: "/ICS20-UNIT5-3/",
   })
 }
 
 /**
- * This function displays an alert.
+ * this function updates slider value
+ */
+function updateSliderValue(valueFromSlider) {
+  document.getElementById("slider-value").innerHTML = valueFromSlider
+}
+
+/**
+ * this function
  */
 function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+  const age = parseInt(document.getElementById("slider").value)
+
+  if (age >= 17) {
+    document.getElementById("answer").innerHTML =
+      "you can watch an R rated movie alone!"
+  } else if (age >= 13) {
+    document.getElementById("answer").innerHTML =
+      "you can watch a PG-13 rated movie alone!"
+  } else if (age >= 5) {
+    document.getElementById("answer").innerHTML =
+      "you can watch a PG rated movie alone!"
+  } else {
+    document.getElementById("answer").innerHTML =
+      "you're too young to do anything!"
+  }
 }
